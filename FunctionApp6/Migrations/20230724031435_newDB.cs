@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace CURD_APP.Migrations
+namespace FunctionApp6.Migrations
 {
     /// <inheritdoc />
-    public partial class Schemachanges : Migration
+    public partial class newDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -14,6 +14,9 @@ using Azure.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
+//builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
+
 // 1) define a unique string
 string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -48,12 +51,12 @@ SecretClientOptions options = new SecretClientOptions()
             Mode = RetryMode.Exponential
          }
 };
-var client = new SecretClient(new Uri("https://mykeyvault624.vault.azure.net/"), new DefaultAzureCredential(), options);
+//var client = new SecretClient(new Uri("https://mykeyvault624paid.vault.azure.net/"), new DefaultAzureCredential(), options);
 
-KeyVaultSecret secret = client.GetSecret("AZURESQLCONNECTIONSTRING");
+//KeyVaultSecret secret = client.GetSecret("AZURESQLCONNECTIONSTRING");
 
-string secretValue = secret.Value;
-builder.Configuration["ConnectionStrings:AZURE_SQL_CONNECTIONSTRING"] = secretValue;
+//string secretValue = secret.Value;
+//builder.Configuration["ConnectionStrings:AZURE_SQL_CONNECTIONSTRING"] = secretValue;
 
 // Add services to the container.
 builder.Services.AddScoped<IAPIServices, APIServices>();

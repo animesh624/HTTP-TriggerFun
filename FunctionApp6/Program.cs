@@ -43,7 +43,7 @@ namespace MyFunctionApp
                         });
                     });
                     services.AddDbContext<ApplicationDbContext>(options =>
-                        options.UseSqlServer("Server=tcp:india123.database.windows.net,1433;Initial Catalog=Restraunt;Persist Security Info=False;User ID=CloudSA16ef57af;Password=Summers@2023!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+                        options.UseSqlServer("Server=tcp:server624.database.windows.net,1433;Initial Catalog=Restraunt;Persist Security Info=False;User ID=animesh624;Password=Summers@2023!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
                     services.AddScoped<IAPIServices, APIServices>();
                     services.AddDefaultIdentity<IdentityUser>();
                

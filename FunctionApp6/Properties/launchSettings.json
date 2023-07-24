@@ -2,8 +2,13 @@
   "profiles": {
     "FunctionApp6": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7292",
-      "launchBrowser": false
+      "commandLineArgs": "--port 7292"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 30120,
+      "useSSL": false
     }
   }
 }

@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  curd_app:
+    image: ${DOCKER_REGISTRY-}curdapp
+    build:
+      context: .
+      dockerfile: CURD_APP/Dockerfile
+
+  functionapp6:
+    image: ${DOCKER_REGISTRY-}functionapp6
+    build:
+      context: .
+      dockerfile: FunctionApp6/Dockerfile
+

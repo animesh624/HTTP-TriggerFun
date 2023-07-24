@@ -39,7 +39,7 @@ namespace FunctionApp6
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             List<Model1> item = JsonConvert.DeserializeObject<List<Model1>>(requestBody);
 
-            string connectionString = "DefaultEndpointsProtocol=https;AccountName=multifile624;AccountKey=Hp49Z4eIKNSSEi7yhjGj/3Onl+K0OHBb2tLhBUW9m8ZUDDIKsowqHJLVN3tjrnSPD0EZ4ZBrG9Pq+AStovIiIw==;EndpointSuffix=core.windows.net";
+            string connectionString = "DefaultEndpointsProtocol=https;AccountName=multifile624paid;AccountKey=C4NdRLLUt2xWRPsGVC8Uc43cu79vlXcfwg0LKZVt6jDCelDvqyb2vR0Ck9E6434kir1wwjUVEBCX+AStI5jAPQ==;EndpointSuffix=core.windows.net";
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
             try{
                 Model1 insertItem = new Model1 { DishName = "Checking3", Price = 10, Weight = 10 };

@@ -32,11 +32,6 @@ namespace CURD_APP.Controllers
             {
                 return BadRequest("Bad credentials");
             }
-            request = new Login
-            {
-                UserName = "animesh1242",
-                Password = "password123"
-            };
 
             var user = await _userManager.FindByNameAsync(request.UserName);
 

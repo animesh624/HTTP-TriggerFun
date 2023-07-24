@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CURD_APP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230629031459_newaddeddb")]
-    partial class newaddeddb
+    [Migration("20230724020515_newDB")]
+    partial class newDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

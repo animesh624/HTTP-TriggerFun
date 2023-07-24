@@ -21,7 +21,7 @@ namespace MyFunctionApp
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddDbContext<ApplicationDbContext>(options =>
-                        options.UseSqlServer("Server=tcp:india123.database.windows.net,1433;Initial Catalog=Restraunt;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Authentication=\"Active Directory Default\";")); // Replace <connection_string> with your Azure SQL Database connection string
+                        options.UseSqlServer("Server=tcp:server624.database.windows.net,1433;Initial Catalog=Restraunt;Persist Security Info=False;User ID=animesh624;Password=Summers@2023!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;")); // Replace <connection_string> with your Azure SQL Database connection string
                     services.AddScoped<IAPIServices, APIServices>();
                     services.AddScoped<JwtService>();
                     services.AddDefaultIdentity<IdentityUser>()
